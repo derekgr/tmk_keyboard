@@ -23,14 +23,14 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 0: default
         // left hand
-        GRV,1,   2,   3,   4,   5,    NO,
+        GRV, 1,   2,   3,   4,   5,    NO,
         TAB, Q,   W,   E,   R,   T,   LBRC,
-        LCTL,A,   S,   D,   F,   G,
+        FN2, A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   FN0,
         FN1, NO,  CAPS,LEFT,RGHT,
                                       LALT,HOME,
                                            END,
-                                 BSPC,ESC, LGUI,
+                                 BSPC,FN2, LGUI,
         // right hand
              EQL, 6,   7,   8,   9,   0,   MINS,
              RBRC,Y,   U,   I,   O,   P,   BSLS,
@@ -75,6 +75,7 @@ enum function_id {
 static const uint16_t PROGMEM fn_actions[] = {
     ACTION_DEFAULT_LAYER_SET(0),                    // FN0 - switch to Layer0
     ACTION_LAYER_MOMENTARY(1),                      // FN1 - push Layer1
+    ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),          // FN2 - LCtl with tap Escape
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
