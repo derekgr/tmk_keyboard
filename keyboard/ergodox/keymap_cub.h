@@ -13,7 +13,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *   | ~L1  |      | Caps |  Lft | Rght |                                       |  Up  |  Dn  |      |      |      |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        |      | Home |       | PgUp | Del  |
+     *                                        | LAlt | Home |       | PgUp | Del  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |  End |       | PgDn |      |      |
      *                                 | BkSp |  ESC |------|       |------| Enter| Space|
@@ -28,7 +28,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LCTL,A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   B,
         FN1, NO,  CAPS,LEFT,RGHT,
-                                      NO,  HOME,
+                                      LALT,HOME,
                                            END,
                                  BSPC,ESC, LGUI,
         // right hand
