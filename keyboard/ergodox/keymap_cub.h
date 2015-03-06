@@ -10,7 +10,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|  L0  |           |      |------+------+------+------+------+--------|
      * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   | ~L1  |      | Caps |  Lft | Rght |                                       |  Up  |  Dn  |      |      |      |
+     *   | ~L1  | Lft  | Rght |  LGui| Lalt |                                       |  Up  |  Dn  |      |      |      |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        | Home |  End |       | PgUp | PgDn |
@@ -27,10 +27,10 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q,   W,   E,   R,   T,   LBRC,
         FN2, A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   FN0,
-        FN1, NO,  CAPS,LEFT,RGHT,
-                                      HOME,END,
-                                           LALT,
-                                 BSPC,FN2, LGUI,
+        FN1, LEFT,  RIGHT,LGUI,LALT,
+        HOME,END,
+        LALT,
+        BSPC,FN2, LGUI,
         // right hand
              EQL, 6,   7,   8,   9,   0,   MINS,
              RBRC,Y,   U,   I,   O,   P,   BSLS,
@@ -42,11 +42,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGUI,ENT, SPC
     ),
 
-    KEYMAP(  // layout: layer 1: F-keys instead of numbers
+    KEYMAP(  // layout: layer 1: F-keys instead of numbers, media keys
         // left hand
         TRNS,F1,  F2,  F3,  F4,  F5,  F6,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,VOLD,VOLU,MUTE,TRNS,TRNS,TRNS,
+        TRNS,MPRV,MNXT,MPLY,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
@@ -91,4 +91,3 @@ void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
         print("not supported.\n");
     }
 }
-
